@@ -4,21 +4,21 @@ import { Injectable } from '@angular/core';
 export class CartService {
 
   //items: []
-  result : string[] = [];
+  items : string[] = [];
 
   constructor() { }
 
   addToCart(product) {
-    this.result.push(product);
+    this.items.push(product);
   }
 
   getItems() {
-    return this.result;
+    return this.items;
   }
 
   clearCart() {
-    this.result = [];
-    return this.result;
+    this.items = [];
+    return this.items;
   }
 
 }
