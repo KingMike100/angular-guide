@@ -3,20 +3,22 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class CartService {
 
-  items: []
+  //items: []
+  result : string[] = [];
+
   constructor() { }
 
   addToCart(product) {
-    this.items.push(product);
+    this.result.push(product);
   }
 
   getItems() {
-    return this.items;
+    return this.result;
   }
 
   clearCart() {
-    this.items = [];
-    return this.items;
+    this.result = [];
+    return this.result;
   }
 
 }
